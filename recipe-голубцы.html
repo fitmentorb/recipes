@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Голубцы - SHREDY 🤖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .author {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #ecf0f1;
+            color: #667eea;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .nutrition-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+
+        .nutrition-box h3 {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .nutrition-item {
+            text-align: center;
+        }
+
+        .nutrition-label {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+
+        .nutrition-value {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients-list li {
+            padding: 12px 0;
+            color: #34495e;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+
+        .ingredients-list li::before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            color: #34495e;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .servings {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 2px solid #667eea;
+            color: #34495e;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #ecf0f1;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .nutrition-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .section h2 {
+                font-size: 20px;
+            }
+
+            .recipe-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html">← SHREDY 🤖</a>
+        </header>
+
+        <img src="https://telegra.ph/file/8c8ed86f06c9cf45551cf.jpg" alt="Голубцы" class="recipe-image">
+
+        <div class="content">
+            <h1>Голубцы</h1>
+            <div class="author">SHREDY 🤖 • Сентябрь 29, 2023</div>
+
+            <div class="tags">
+                <span class="tag">#ужин</span>
+                <span class="tag">#безглютена</span>
+                <span class="tag">#безмолочки</span>
+            </div>
+
+            <div class="nutrition-box">
+                <h3>Пищевая ценность (на порцию):</h3>
+                <div class="nutrition-grid">
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">Калории</div>
+                        <div class="nutrition-value">281.2</div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">Белки</div>
+                        <div class="nutrition-value">70.3 г</div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">Жиры</div>
+                        <div class="nutrition-value">0 г</div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">Углеводы</div>
+                        <div class="nutrition-value">0 г</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🛒 Ингредиенты</h2>
+                <ul class="ingredients-list">
+                    <li>400 г капусты</li>
+                    <li>330 г фарша из куриной грудки</li>
+                    <li>2 зубчика чеснока</li>
+                    <li>30 г томатной пасты</li>
+                    <li>1 луковица</li>
+                    <li>1 морковь</li>
+                    <li>соль</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>👨‍🍳 Приготовление</h2>
+                <div class="steps-list">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-text">
+                                <strong>Подготовка овощей</strong><br>
+                                Мелко нарежь лук и натри на терке морковь. Обжарь на капле масла до золотистого цвета.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-text">
+                                <strong>Подготовка начинки</strong><br>
+                                Смешай обжаренные лук и морковь с фаршем и посоли.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-text">
+                                <strong>Подготовка капусты</strong><br>
+                                Срежь толстое и жесткое основание капусты (около 5 см от кочерыжки). Раздели кочан на листья.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <div class="step-text">
+                                <strong>Размягчение листьев</strong><br>
+                                Выложи 5-7 листов капусты на тарелку и поставь в микроволновую печь. На максимальной мощности выдержи примерно 3 минуты - до размягчения. При отсутствии микроволновки отвари листья 2-3 минуты в кипящей воде.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <div class="step-text">
+                                <strong>Наполнение</strong><br>
+                                На более плотную и толстую часть капустного листа положи одну или две столовые ложки фарша (в зависимости от величины листьев).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">6</div>
+                            <div class="step-text">
+                                <strong>Скручивание</strong><br>
+                                Заверни с боков и начинай скручивать голубцы, стараясь формировать закрытые со всех сторон, аккуратные голубцы.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">7</div>
+                            <div class="step-text">
+                                <strong>Тушение</strong><br>
+                                Выложи голубцы в кастрюлю, добавь томатную пасту, соль и залей горячей водой (200 мл). Если заливки оказалось недостаточно (верхние голубцы остались непокрытыми более чем наполовину), добавь еще воды. Поставь на плиту и дожидись кипения.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">8</div>
+                            <div class="step-text">
+                                <strong>Финальная готовка</strong><br>
+                                Туши на медленном огне под крышкой примерно 40-50 минут.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="servings">
+                <strong>📍 Количество порций:</strong> 1
+            </div>
+        </div>
+    </div>
+</body>
+</html>
