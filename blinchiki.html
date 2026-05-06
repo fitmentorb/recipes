@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Блинчики</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background: #faf8f5; color: #2d2d2d; min-height: 100vh; }
+    .hero { position: relative; width: 100%; height: 380px; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%); }
+    .hero-title { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; color: #fff; font-size: 2rem; font-weight: bold; text-shadow: 0 2px 8px rgba(0,0,0,0.5); line-height: 1.2; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 20px 20px 0; }
+    .tag { background: #3a3a3a; color: #fff; font-size: 0.75rem; font-family: sans-serif; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px 60px; }
+    .nutrition { display: flex; justify-content: space-around; background: #fff; border-radius: 16px; padding: 20px 16px; margin: 24px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .nutrition-item { text-align: center; }
+    .nutrition-value { font-size: 1.5rem; font-weight: bold; color: #2d2d2d; font-family: sans-serif; }
+    .nutrition-label { font-size: 0.72rem; color: #888; font-family: sans-serif; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .nutrition-divider { width: 1px; background: #eee; align-self: stretch; }
+    .section-title { font-size: 1.1rem; font-weight: bold; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
+    .ingredients-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .ingredients-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; line-height: 1.4; }
+    .ing-dot { width: 8px; height: 8px; border-radius: 50%; background: #c8a87a; flex-shrink: 0; margin-top: 7px; }
+    .steps-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .step-num { width: 36px; height: 36px; border-radius: 50%; background: #2d2d2d; color: #fff; font-family: sans-serif; font-size: 0.9rem; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-text { font-size: 1rem; line-height: 1.6; padding-top: 6px; }
+    .servings { margin-top: 32px; background: #fff; border-radius: 12px; padding: 16px 20px; font-family: sans-serif; font-size: 0.9rem; color: #555; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #c8a87a; }
+    .servings strong { color: #2d2d2d; }
+    @media (max-width: 480px) { .hero { height: 260px; } .hero-title { font-size: 1.4rem; } .nutrition-value { font-size: 1.2rem; } }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <img src="https://fitmentorb.github.io/recipes/blinchiki.jpg" alt="Блинчики" />
+    <div class="hero-overlay"></div>
+    <div class="hero-title">Блинчики</div>
+  </div>
+  <div class="tags"><span class="tag">#завтрак</span><span class="tag">#безглютена</span><span class="tag">#безмолочки</span></div>
+  <div class="container">
+    <div class="nutrition">
+      <div class="nutrition-item"><div class="nutrition-value">347,2</div><div class="nutrition-label">Калории</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">13 г</div><div class="nutrition-label">Белки</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">18 г</div><div class="nutrition-label">Жиры</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">33,3 г</div><div class="nutrition-label">Углеводы</div></div>
+    </div>
+    <div class="section-title">Ингредиенты</div>
+    <ul class="ingredients-list"><li><span class="ing-dot"></span><span>40 г рисовой муки</span></li><li><span class="ing-dot"></span><span>2 яйца</span></li><li><span class="ing-dot"></span><span>соль</span></li><li><span class="ing-dot"></span><span>200 г кокосового молока Alpro БЕЗ сахара</span></li><li><span class="ing-dot"></span><span>Для украшения: 20 г ягод, 20 г кокосовых сливок Aroy-D</span></li></ul>
+    <div class="section-title">Приготовление</div>
+    <ol class="steps-list"><li class="step"><div class="step-num">1</div><div class="step-text">Смешай все ингредиенты и дай настояться тесту 10 минут.</div></li><li class="step"><div class="step-num">2</div><div class="step-text">Разогрей сковороду на среднем огне. С помощью ложки выливай тесто на сковороду, формируя маленькие блинчики. Пеки 1–2 минуты, затем переверни и оставь еще на 1 минуту.</div></li><li class="step"><div class="step-num">3</div><div class="step-text">Укрась кокосовыми сливками и ягодами.</div></li></ol>
+    <div class="servings"><strong>Количество порций: 1</strong></div>
+  </div>
+</body>
+</html>
