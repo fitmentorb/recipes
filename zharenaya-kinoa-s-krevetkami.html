@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Жареная киноа с креветками и яичным белком</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background: #faf8f5; color: #2d2d2d; min-height: 100vh; }
+    .hero { position: relative; width: 100%; height: 380px; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #c8a87a, #8b6914); display: flex; align-items: center; justify-content: center; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%); }
+    .hero-title { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; color: #fff; font-size: 2rem; font-weight: bold; text-shadow: 0 2px 8px rgba(0,0,0,0.5); line-height: 1.2; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 20px 20px 0; }
+    .tag { background: #3a3a3a; color: #fff; font-size: 0.75rem; font-family: sans-serif; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px 60px; }
+    .nutrition { display: flex; justify-content: space-around; background: #fff; border-radius: 16px; padding: 20px 16px; margin: 24px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .nutrition-item { text-align: center; }
+    .nutrition-value { font-size: 1.5rem; font-weight: bold; color: #2d2d2d; font-family: sans-serif; }
+    .nutrition-label { font-size: 0.72rem; color: #888; font-family: sans-serif; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .nutrition-divider { width: 1px; background: #eee; align-self: stretch; }
+    .section-title { font-size: 1.1rem; font-weight: bold; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
+    .ingredients-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .ingredients-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; line-height: 1.4; }
+    .ing-dot { width: 8px; height: 8px; border-radius: 50%; background: #c8a87a; flex-shrink: 0; margin-top: 7px; }
+    .steps-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .step-num { width: 36px; height: 36px; border-radius: 50%; background: #2d2d2d; color: #fff; font-family: sans-serif; font-size: 0.9rem; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-text { font-size: 1rem; line-height: 1.6; padding-top: 6px; }
+    .servings { margin-top: 32px; background: #fff; border-radius: 12px; padding: 16px 20px; font-family: sans-serif; font-size: 0.9rem; color: #555; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #c8a87a; }
+    .servings strong { color: #2d2d2d; }
+    @media (max-width: 480px) { .hero { height: 260px; } .hero-title { font-size: 1.4rem; } .nutrition-value { font-size: 1.2rem; } }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-placeholder"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-title">Жареная киноа с креветками и яичным белком</div>
+  </div>
+  <div class="tags"><span class="tag">#завтрак</span><span class="tag">#обед</span><span class="tag">#безглютена</span><span class="tag">#безмолочки</span><span class="tag">#морепродукты</span></div>
+  <div class="container">
+    <div class="nutrition">
+      <div class="nutrition-item"><div class="nutrition-value">257</div><div class="nutrition-label">Калории</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">31 г</div><div class="nutrition-label">Белки</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">6 г</div><div class="nutrition-label">Жиры</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">19 г</div><div class="nutrition-label">Углеводы</div></div>
+    </div>
+    <div class="section-title">Ингредиенты</div>
+    <ul class="ingredients-list"><li><span class="ing-dot"></span><span>115 г сырой киноа</span></li><li><span class="ing-dot"></span><span>1 ст. л. кунжутного масла</span></li><li><span class="ing-dot"></span><span>1 небольшая луковица, мелко нарезанная</span></li><li><span class="ing-dot"></span><span>1 болгарский перец, мелко нарезанный</span></li><li><span class="ing-dot"></span><span>200 г нарезанных соцветий брокколи</span></li><li><span class="ing-dot"></span><span>200 г зеленого горошка</span></li><li><span class="ing-dot"></span><span>1 ст. л. тертого свежего имбиря</span></li><li><span class="ing-dot"></span><span>1 зубчик чеснока, измельченный</span></li><li><span class="ing-dot"></span><span>454 г очищенных креветок</span></li><li><span class="ing-dot"></span><span>2 ст. л. соевого соуса</span></li><li><span class="ing-dot"></span><span>2 ст. л. рисового уксуса</span></li><li><span class="ing-dot"></span><span>щепотка хлопьев красного перца</span></li><li><span class="ing-dot"></span><span>135 мл яичных белков (3 яичных белка)</span></li><li><span class="ing-dot"></span><span>нарезанный зеленый лук для украшения</span></li></ul>
+    <div class="section-title">Приготовление</div>
+    <ol class="steps-list"><li class="step"><div class="step-num">1</div><div class="step-text">Приготовь киноа согласно инструкции на упаковке и дай остыть.</div></li><li class="step"><div class="step-num">2</div><div class="step-text">Нагрей кунжутное масло в большой сковороде или воке на средне-сильном огне. Добавь все овощи, имбирь и чеснок и готовь 4–5 минут, пока овощи не станут мягкими.</div></li><li class="step"><div class="step-num">3</div><div class="step-text">С помощью лопаточки перемести овощи на одну сторону сковороды и выложи креветки на освободившееся место. Готовь креветки 3–4 минуты, периодически помешивая.</div></li><li class="step"><div class="step-num">4</div><div class="step-text">Добавь в сковороду киноа, соевый соус, рисовый уксус, хлопья красного перца и перемешай.</div></li><li class="step"><div class="step-num">5</div><div class="step-text">Перемести все на одну сторону сковороды и добавь яичные белки на освободившееся место. Обжарь белки до полной готовности, постоянно помешивая лопаткой. Затем смешай белковый скрэмбл с остальной смесью.</div></li><li class="step"><div class="step-num">6</div><div class="step-text">Укрась нарезанным зеленым луком.</div></li></ol>
+    <div class="servings"><strong>Количество порций: 4</strong></div>
+  </div>
+</body>
+</html>

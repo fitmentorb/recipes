@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Киноа с курицей и брокколи</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background: #faf8f5; color: #2d2d2d; min-height: 100vh; }
+    .hero { position: relative; width: 100%; height: 380px; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #c8a87a, #8b6914); display: flex; align-items: center; justify-content: center; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%); }
+    .hero-title { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; color: #fff; font-size: 2rem; font-weight: bold; text-shadow: 0 2px 8px rgba(0,0,0,0.5); line-height: 1.2; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 20px 20px 0; }
+    .tag { background: #3a3a3a; color: #fff; font-size: 0.75rem; font-family: sans-serif; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px 60px; }
+    .nutrition { display: flex; justify-content: space-around; background: #fff; border-radius: 16px; padding: 20px 16px; margin: 24px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .nutrition-item { text-align: center; }
+    .nutrition-value { font-size: 1.5rem; font-weight: bold; color: #2d2d2d; font-family: sans-serif; }
+    .nutrition-label { font-size: 0.72rem; color: #888; font-family: sans-serif; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .nutrition-divider { width: 1px; background: #eee; align-self: stretch; }
+    .section-title { font-size: 1.1rem; font-weight: bold; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
+    .ingredients-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .ingredients-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; line-height: 1.4; }
+    .ing-dot { width: 8px; height: 8px; border-radius: 50%; background: #c8a87a; flex-shrink: 0; margin-top: 7px; }
+    .steps-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .step-num { width: 36px; height: 36px; border-radius: 50%; background: #2d2d2d; color: #fff; font-family: sans-serif; font-size: 0.9rem; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-text { font-size: 1rem; line-height: 1.6; padding-top: 6px; }
+    .servings { margin-top: 32px; background: #fff; border-radius: 12px; padding: 16px 20px; font-family: sans-serif; font-size: 0.9rem; color: #555; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #c8a87a; }
+    .servings strong { color: #2d2d2d; }
+    @media (max-width: 480px) { .hero { height: 260px; } .hero-title { font-size: 1.4rem; } .nutrition-value { font-size: 1.2rem; } }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-placeholder"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-title">Киноа с курицей и брокколи</div>
+  </div>
+  <div class="tags"><span class="tag">#обед</span><span class="tag">#безглютена</span><span class="tag">#безмолочки</span><span class="tag">#птица</span></div>
+  <div class="container">
+    <div class="nutrition">
+      <div class="nutrition-item"><div class="nutrition-value">640</div><div class="nutrition-label">Калории</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">50 г</div><div class="nutrition-label">Белки</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">20 г</div><div class="nutrition-label">Жиры</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">62 г</div><div class="nutrition-label">Углеводы</div></div>
+    </div>
+    <div class="section-title">Ингредиенты</div>
+    <ul class="ingredients-list"><li><span class="ing-dot"></span><span>1/2 среднего лимона</span></li><li><span class="ing-dot"></span><span>4 ст. л. растительного масла</span></li><li><span class="ing-dot"></span><span>340 г куриных грудок без кожи, нарезанных небольшими кусочками</span></li><li><span class="ing-dot"></span><span>165 г киноа</span></li><li><span class="ing-dot"></span><span>3/4 ч. л. соли</span></li><li><span class="ing-dot"></span><span>450 г замороженных соцветий брокколи, предварительно размороженных</span></li></ul>
+    <div class="section-title">Приготовление</div>
+    <ol class="steps-list"><li class="step"><div class="step-num">1</div><div class="step-text">Натри 1 ч. л. цедры лимона, а из мякоти выдави 1 ст. л. лимонного сока.</div></li><li class="step"><div class="step-num">2</div><div class="step-text">Разогрей 2 ст. л. растительного масла в кастрюле на среднем или сильном огне и обжарь курицу, время от времени помешивая, до полной готовности, около 7 минут. Достань курицу и отложи в сторону.</div></li><li class="step"><div class="step-num">3</div><div class="step-text">В эту же кастрюлю добавь 800–900 мл воды и доведи до кипения. Добавь киноа, соль и доведи до кипения на среднем огне. Закрой крышкой, уменьши огонь и вари 10 минут.</div></li><li class="step"><div class="step-num">4</div><div class="step-text">Положи соцветия брокколи поверх киноа. Накрой крышкой и готовь, пока брокколи и киноа не станут мягкими, около 5–7 минут. Сними с огня, перемешай с курицей и дай постоять 5 минут.</div></li><li class="step"><div class="step-num">5</div><div class="step-text">Смешай 2 ст. л. растительного масла, лимонный сок, цедру и добавь в смесь курицы и киноа. По желанию приправь молотым черным перцем.</div></li></ol>
+    <div class="servings"><strong>Количество порций: 2</strong><br>Размер порции: 228 г курицы + 290 г вареной киноа + 228 г брокколи</div>
+  </div>
+</body>
+</html>

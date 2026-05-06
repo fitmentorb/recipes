@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Жареная говядина с брокколи</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background: #faf8f5; color: #2d2d2d; min-height: 100vh; }
+    .hero { position: relative; width: 100%; height: 380px; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #c8a87a, #8b6914); display: flex; align-items: center; justify-content: center; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%); }
+    .hero-title { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; color: #fff; font-size: 2rem; font-weight: bold; text-shadow: 0 2px 8px rgba(0,0,0,0.5); line-height: 1.2; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 20px 20px 0; }
+    .tag { background: #3a3a3a; color: #fff; font-size: 0.75rem; font-family: sans-serif; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px 60px; }
+    .nutrition { display: flex; justify-content: space-around; background: #fff; border-radius: 16px; padding: 20px 16px; margin: 24px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .nutrition-item { text-align: center; }
+    .nutrition-value { font-size: 1.5rem; font-weight: bold; color: #2d2d2d; font-family: sans-serif; }
+    .nutrition-label { font-size: 0.72rem; color: #888; font-family: sans-serif; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .nutrition-divider { width: 1px; background: #eee; align-self: stretch; }
+    .section-title { font-size: 1.1rem; font-weight: bold; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
+    .ingredients-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .ingredients-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; line-height: 1.4; }
+    .ing-dot { width: 8px; height: 8px; border-radius: 50%; background: #c8a87a; flex-shrink: 0; margin-top: 7px; }
+    .steps-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .step-num { width: 36px; height: 36px; border-radius: 50%; background: #2d2d2d; color: #fff; font-family: sans-serif; font-size: 0.9rem; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-text { font-size: 1rem; line-height: 1.6; padding-top: 6px; }
+    .servings { margin-top: 32px; background: #fff; border-radius: 12px; padding: 16px 20px; font-family: sans-serif; font-size: 0.9rem; color: #555; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #c8a87a; }
+    .servings strong { color: #2d2d2d; }
+    @media (max-width: 480px) { .hero { height: 260px; } .hero-title { font-size: 1.4rem; } .nutrition-value { font-size: 1.2rem; } }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-placeholder"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-title">Жареная говядина с брокколи</div>
+  </div>
+  <div class="tags"><span class="tag">#обед</span><span class="tag">#безглютена</span><span class="tag">#безмолочки</span><span class="tag">#мясо</span></div>
+  <div class="container">
+    <div class="nutrition">
+      <div class="nutrition-item"><div class="nutrition-value">489</div><div class="nutrition-label">Калории</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">39 г</div><div class="nutrition-label">Белки</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">17 г</div><div class="nutrition-label">Жиры</div></div>
+      <div class="nutrition-divider"></div>
+      <div class="nutrition-item"><div class="nutrition-value">45 г</div><div class="nutrition-label">Углеводы</div></div>
+    </div>
+    <div class="section-title">Ингредиенты</div>
+    <ul class="ingredients-list"><li><span class="ing-dot"></span><span>220 г бурого риса (сухого продукта)</span></li><li><span class="ing-dot"></span><span>1 ч. л. тертого имбиря</span></li><li><span class="ing-dot"></span><span>450 г постной говядины, нарезанной на кусочки толщиной 0,5 см</span></li><li><span class="ing-dot"></span><span>3,5 ст. л. соевого соуса</span></li><li><span class="ing-dot"></span><span>3 зубчика чеснока, измельченных</span></li><li><span class="ing-dot"></span><span>225 г грибов шиитаке, нарезанных ломтиками</span></li><li><span class="ing-dot"></span><span>340 г брокколи, нарезанной</span></li><li><span class="ing-dot"></span><span>2 ч. л. рисового уксуса</span></li><li><span class="ing-dot"></span><span>1,5 ст. л. томатной пасты</span></li><li><span class="ing-dot"></span><span>150 г куриного бульона</span></li><li><span class="ing-dot"></span><span>2 ст. л. растительного масла</span></li><li><span class="ing-dot"></span><span>1/2 лимона, выжатый сок</span></li></ul>
+    <div class="section-title">Приготовление</div>
+    <ol class="steps-list"><li class="step"><div class="step-num">1</div><div class="step-text">Смешай имбирь и 1 ст. л. соевого соуса. Добавь говядину и перемешай. Оставь мариноваться минимум на 10 минут.</div></li><li class="step"><div class="step-num">2</div><div class="step-text">Поставь вариться рис. Как только вода закипит, перемешай рис. Накрой крышкой, уменьши огонь до минимума и оставь вариться 45 минут.</div></li><li class="step"><div class="step-num">3</div><div class="step-text">Нагрей вок или большую сковороду на средне-сильном огне. Добавь брокколи с 1/2 стакана воды и жарь, помешивая, пока вода не испарится.</div></li><li class="step"><div class="step-num">4</div><div class="step-text">Посоли, добавь грибы. Жарь, помешивая, до полной готовности грибов.</div></li><li class="step"><div class="step-num">5</div><div class="step-text">Разогрей сковороду на сильном огне, добавь растительное масло, а затем выложи мясо. По возможности разложи говядину в один слой. Готовь 1 минуту, затем добавь чеснок, брокколи и грибы, и перемешай.</div></li><li class="step"><div class="step-num">6</div><div class="step-text">В отдельной миске приготовь соус для жарки: смешай 2,5 ст. л. соевого соуса, рисовый уксус и куриный бульон.</div></li><li class="step"><div class="step-num">7</div><div class="step-text">Отодвинь все ингредиенты в сторону, освобождая пространство в центре сковороды. Вылей соус в центр. Оставь его до тех пор, пока соус не закипит. После перемешай все, посоли и поперчи по вкусу и оставь тушиться еще 5 минут. В завершение добавь лимонный сок.</div></li></ol>
+    <div class="servings"><strong>Количество порций: 4</strong><br>Размер порции: 1/4 говядины + 1/4 риса</div>
+  </div>
+</body>
+</html>
